@@ -1,0 +1,118 @@
+/* KYFEST 2026 — extracted from the original landing page. */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#02050b;color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidden}
+:root{--orange:#ff6a00;--yellow:#ffc400;--cyan:#11d9ee;--blue:#0879ff;--dark:#02050b}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,90%);margin:auto}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 0;transition:.3s}
+nav.scrolled{background:rgba(0,5,13,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,217,255,.18)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Bebas Neue';font-size:26px;letter-spacing:2px}
+.brand img{width:42px;height:42px;object-fit:contain}
+.brand span{color:var(--cyan)}
+.navlinks{display:flex;gap:28px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+.navlinks a:hover{color:var(--cyan)}
+.menu{display:none;font-size:25px}
+
+/* HERO */
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;
+background:#02050b;
+}
+.hero-bg{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.15) 55%,rgba(0,0,0,.65)),url("assets/images/image-1.png");
+background-size:cover;background-position:center top;filter:saturate(1.05);transform:scale(1.02)}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:28%;background:linear-gradient(transparent,#02050b);z-index:1}
+.hero-content{position:relative;z-index:3;max-width:670px;padding-top:80px}
+.eyebrow{font-weight:800;letter-spacing:4px;color:var(--cyan);font-size:13px;text-transform:uppercase}
+.hero h1{font-family:'Anton','Bebas Neue',sans-serif;text-transform:uppercase;font-size:clamp(65px,10vw,140px);line-height:.84;margin:18px 0;letter-spacing:2px;text-shadow:7px 7px 0 #063e9d}
+.hero h1 span{display:block;color:var(--orange);text-shadow:5px 5px 0 #8e2000}
+.hero p{font-size:18px;line-height:1.7;color:#e5edf7;max-width:570px}
+.buttons{display:flex;gap:13px;margin-top:28px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 23px;border-radius:7px;font-size:13px;font-weight:900;letter-spacing:1px;text-transform:uppercase;transition:.25s}
+.btn.primary{background:linear-gradient(135deg,var(--yellow),var(--orange));color:#120800;box-shadow:0 0 30px rgba(255,106,0,.28)}
+.btn.secondary{border:2px solid var(--cyan);color:#fff;background:rgba(0,30,60,.35)}
+.btn:hover{transform:translateY(-4px);filter:brightness(1.12)}
+.hero-scroll{position:absolute;bottom:35px;left:50%;transform:translateX(-50%);z-index:4;font-size:11px;letter-spacing:4px;color:#9bb4d0}
+
+/* GENERAL */
+section{padding:110px 0;position:relative}
+.space{background:
+radial-gradient(circle at 15% 20%,rgba(0,116,255,.14),transparent 25%),
+radial-gradient(circle at 85% 75%,rgba(255,92,0,.12),transparent 28%),#02050b}
+.section-head{display:flex;justify-content:space-between;gap:35px;align-items:end;margin-bottom:48px}
+.kicker{color:var(--orange);font-family:'Bebas Neue';font-size:24px;letter-spacing:3px}
+h2{font-family:'Anton','Bebas Neue';font-size:clamp(48px,7vw,86px);line-height:.9;text-transform:uppercase}
+.section-head p{max-width:470px;color:#9fb2c8;line-height:1.8}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px}
+.about-card{background:linear-gradient(145deg,rgba(8,35,76,.8),rgba(3,12,27,.9));border:1px solid rgba(17,217,238,.18);padding:38px;border-radius:24px}
+.about-card p{color:#c4d2e4;line-height:1.9}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.stat{padding:28px;border:1px solid rgba(255,255,255,.1);border-radius:20px;background:rgba(255,255,255,.035)}
+.stat strong{font-family:'Anton';font-size:48px;color:var(--yellow);display:block}
+.stat span{color:#9aacc2;font-size:13px}
+
+/* COMPETITIONS */
+.comps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.comp{position:relative;overflow:hidden;min-height:230px;border-radius:20px;padding:28px;background:linear-gradient(145deg,#102e61,#050c1a);border:2px solid #073a80;transition:.3s}
+.comp:before{content:"";position:absolute;inset:-40%;background:radial-gradient(circle,rgba(0,217,255,.13),transparent 55%);transform:rotate(20deg)}
+.comp:hover{transform:translateY(-8px);border-color:var(--cyan);box-shadow:0 15px 45px rgba(0,112,255,.18)}
+.comp>*{position:relative}
+.comp .number{font-family:'Bebas Neue';color:var(--cyan);font-size:20px}
+.comp h3{font-family:'Anton';font-size:38px;text-transform:uppercase;color:var(--yellow);margin-top:55px;text-shadow:3px 3px #8f2700}
+.comp p{font-size:13px;color:#9eb1c9;line-height:1.6;margin-top:7px}
+
+/* TIMELINE */
+.timeline{max-width:900px;margin:auto}
+.event{display:grid;grid-template-columns:170px 1fr;gap:30px;padding:28px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.event-date{font-family:'Bebas Neue';font-size:24px;color:var(--orange)}
+.event h3{font-family:'Anton';font-size:29px;text-transform:uppercase}
+.event p{color:#9fb1c8;margin-top:5px;line-height:1.6}
+
+/* PRIZE */
+.prize-box{position:relative;text-align:center;padding:65px 30px;border-radius:28px;overflow:hidden;border:2px solid #174c9d;background:linear-gradient(135deg,#081d40,#020812)}
+.prize-box:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(0,217,255,.08);filter:blur(40px);left:50%;top:50%;transform:translate(-50%,-50%)}
+.prize-box>*{position:relative}
+.prize-box .amount{font-family:'Anton';font-size:clamp(55px,9vw,110px);color:var(--yellow);text-shadow:6px 6px #9c2600}
+.prize-box p{color:#a8bad0}
+
+/* FAQ */
+.faq{max-width:850px;margin:auto}
+details{border-bottom:1px solid rgba(255,255,255,.13);padding:22px 0}
+summary{cursor:pointer;font-family:'Bebas Neue';font-size:25px;letter-spacing:1px}
+details p{padding:15px 0 3px;color:#9fb2c8;line-height:1.7}
+
+/* CTA */
+.cta{text-align:center;padding-bottom:130px}
+.cta h2{max-width:850px;margin:auto}
+.cta p{color:#a6b8cd;max-width:600px;margin:22px auto;line-height:1.7}
+.logo-large{width:min(210px,55vw);margin:0 auto 28px;display:block;filter:drop-shadow(0 0 20px rgba(255,110,0,.2))}
+
+/* FOOTER */
+footer{border-top:1px solid rgba(255,255,255,.1);padding:30px 0;color:#71869e;font-size:12px}
+.footer-inner{display:flex;justify-content:space-between;gap:20px}
+
+/* ANIMATION */
+.reveal{opacity:0;transform:translateY(30px);transition:.75s ease}
+.reveal.show{opacity:1;transform:none}
+.stars{position:absolute;inset:0;pointer-events:none;opacity:.5;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:85px 85px}
+
+/* MOBILE */
+@media(max-width:800px){
+.navlinks{display:none;position:absolute;right:5%;top:70px;flex-direction:column;background:#06152d;border:1px solid #123b70;padding:20px;border-radius:15px;width:190px}
+.navlinks.open{display:flex}.menu{display:block}
+.hero{min-height:900px;align-items:flex-end;padding-bottom:90px}
+.hero-bg{background-position:62% top}
+.hero-content{padding-top:0}
+.hero h1{font-size:72px}
+.hero p{font-size:15px}
+.section-head{display:block}.section-head p{margin-top:18px}
+.about-grid,.comps{grid-template-columns:1fr}
+.event{grid-template-columns:1fr;gap:8px}
+.footer-inner{flex-direction:column}
+}
